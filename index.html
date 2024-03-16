@@ -15,6 +15,8 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
 
     <title>Document</title>
   </head>
@@ -22,46 +24,42 @@
   <body style="margin: 0">
     <div class="container">
       <div class="row">
-      <h1>Movie Booking</h1>
+      <h1>Todos</h1>
     </div>
     <div class="row">
     
     <div class="col-6">
-    <form novalidate onsubmit="handleSearch()">
+    <form novalidate>
       <div class="form-floating m-2 col">
-        <input class="form-control" type="text" id="username" name="username" />
-        <label for="username">Username</label>
-        <div class="invalid-feedback">username is required*</div>
-        <div class="valid-feedback">correct Username</div>
+        <input class="form-control" type="text" id="taskname" name="taskname" />
+        <label for="taskname">Taskname</label>
+        <div class="invalid-feedback">taskname is required*</div>
+        <div class="valid-feedback">correct taskname</div>
       </div>
       <div class="form-floating m-2 col">
-        <input class="form-control" type="number" id="slot" name="slot"/>
-        <label for="slot">Seat Number</label>
-        <div class="invalid-feedback">Seat number is required*</div>
-        <div class="valid-feedback">correct Seat</div>
+        <input class="form-control" type="text" id="description" name="description"/>
+        <label for="description">Description</label>
+        <div class="invalid-feedback">description is required*</div>
+        <div class="valid-feedback">correct description</div>
       </div>
       
-      <button type="submit" class="btn btn-primary px-3 py-1">Book</button>
+      <button type="submit" class="btn btn-primary px-3 py-1">ADD</button>
     </form>
   </div>
-  <div class="col-6">
-    <form novalidate >
-        <div class="form-floating m-2 col">
-          <input class="form-control" type="number" id="seat" name="seat" />
-          <label for="Seat">Search by Seat Number</label>
-          <div class="invalid-feedback">Number is required*</div>
-          <div class="valid-feedback">correct Number</div>
-        </div>
-        <button type="submit" class="btn btn-primary px-3 py-1">Search</button>
-      </form>
+  
 </div>
-</div>
-<div class="row flex"><p style="font-size: 24px">Empty!</p></div>
+<div id="emptybox" class="row flex"><p style="font-size: 24px">Empty!</p></div>
   <ul id="user-list">
   <div class="row row-cols-5 mt-3">
     
   </div>
 </ul>
+<div class="row flex"><p style="font-size: 24px"><u>Todo Done</u></p></div>
+<ul id="user-list-done">
+    <div class="row row-cols-5 mt-3">
+      
+    </div>
+  </ul>
   </body>
   <script src="index.js"></script>
 </html>
